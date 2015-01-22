@@ -31,7 +31,14 @@ public class Person1 {
 	 */
 	private String calc(String input) {
 	  //Person 1 put your implementation here
-	  return null;
+	  int length = input.length();
+	  
+	  if (length > 2) {
+		  return input.substring(2, length) + input.substring(0, 2);
+	  } else {
+		  return input;
+	  }
+
 	}
 	
 	/**
