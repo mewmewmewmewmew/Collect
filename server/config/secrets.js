@@ -1,12 +1,11 @@
 /**
+ *
  * IMPORTANT DO NOT COMMIT || IMPORTANT DO NOT COMMIT
  *
- * Do not commit this to git - this is only here
- * as an example
+ * Do not commit this file to git. This file is only here as a example of
+ * where to store your secrets i.e. API keys and other sensitive information.
+ * To prevent this file from being commited, add this file to your .gitignore
  *
- * Add this to .gitignore and git rm -rf config/secrets.js
- *
- * Store your API keys here
  */
 
 module.exports = {
