@@ -28,7 +28,7 @@ Quick Start
 =======
 ```
 $ git clone https://github.com/JonathanZWhite/mean-starterkit
-$ cd compass
+$ cd mean-starterkit
 $ npm install
 $ grunt dev
 ```
@@ -61,11 +61,7 @@ Installation
 
   `$ grunt dev`
 
-5. Visit your server at /api/article-read to see a fake endpoint
-
-  `http://localhost:3000/api/article-read`
-
-6. Visit your client in the root directory to see a module
+5. Visit your client in the root directory to see a module
 
   `http://localhost:9001/`
 
