@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/clothes_rack_bg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#a6000000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START COLLECTING"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/ar_register_layout"
+        android:textColor="@color/white"
+        android:textSize="38dp"
+        android:textAppearance="@style/TextAppearance.FontPathBold"
+        />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ar_register_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="15dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.FontPathNormal"
+            android:text="Your Name:"/>
+        <EditText
+            android:id="@+id/ar_name_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:singleLine="true"
+            android:inputType="textAutoComplete"
+            android:hint="@string/name_hint"
+            android:textAppearance="@style/TextAppearance.FontAwesome"
+            />
+        <!--  Email Label -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.FontPathNormal"
+            android:text="E-mail:"/>
+        <EditText
+            android:id="@+id/ar_email_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email_hint"
+            android:textAppearance="@style/TextAppearance.FontAwesome"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.FontPathNormal"
+            android:text="Username:"/>
+        <EditText
+            android:id="@+id/ar_username_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.FontAwesome"
+            android:hint="@string/username_hint"
+            />
+
+        <!--  Password Label -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.FontPathNormal"
+            android:text="Password:"/>
+
+        <EditText
+            android:id="@+id/ar_password_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:password="true"
+            android:hint="@string/password_hint"
+            android:textAppearance="@style/TextAppearance.FontAwesome"
+            />
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/ar_remember_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_toRightOf="@+id/ar_remember_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember me"
+                android:layout_centerVertical="true"
+                android:textAppearance="@style/TextAppearance.FontPathNormal"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button android:id="@+id/ar_register_button"
+        android:background="@drawable/selector_button_pink"
+        android:layout_below="@+id/ar_register_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Sign me up!"
+        android:textAppearance="@style/TextAppearance.FontPathNormal"
+        android:textColor="#fff"/>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorPrimary">@color/main_pink</item>
+        <item name="android:colorPrimaryDark">@color/main_pink_dark</item>
+        <item name="android:colorAccent">@color/main_pink</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:textColorPrimary">@color/abc_primary_text_material_dark</item>
+        <item name="android:textColorSecondary">@color/abc_secondary_text_material_dark</item>
+        <item name="actionMenuTextColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.FontPathBold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/DroidSans-Bold.ttf</item>
+    </style>
+
+    <style name="TextAppearance.FontPathNormal" parent="android:TextAppearance">
+        <item name="fontPath">fonts/DroidSans.ttf</item>
+    </style>
+
+    <style name="TextAppearance.FontAwesome" parent="android:TextAppearance">
+        <item name="fontPath">fonts/fontAwesome.ttf</item>
+    </style>
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/clothes_rack_bg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#a6000000"
+        />
+
+    <TextView
+        android:id="@+id/al_font_awesome_logo"
+        android:layout_above="@+id/al_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fontawesome_logo"
+        android:textAppearance="@style/TextAppearance.FontAwesome"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="45dp"
+        />
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/al_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name_all_caps"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/al_login_layout"
+        android:textColor="@color/white"
+        android:textSize="38dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:textAppearance="@style/TextAppearance.FontPathBold"
+
+        />
+
+    <!-- Most of the time we will use RelativeLayout -->
+    <!-- XML is Actually a lot like HTML, so should be easy -->
+    <!-- If anything is dynamic or interactive, ALWAYS give it an id -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/al_login_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:padding="15dp"
+        android:layout_centerInParent="true">
+
+        <!--  Email Label -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.FontPathNormal"
+            android:text="Email:"/>
+        <EditText
+            android:id="@+id/al_email_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:singleLine="true"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:textAppearance="@style/TextAppearance.FontAwesome"
+            />
+
+        <!--  Password Label -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.FontPathNormal"
+            android:text="Password"/>
+
+        <EditText
+            android:id="@+id/al_password_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:textAppearance="@style/TextAppearance.FontAwesome"
+            />
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/al_remember_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_toRightOf="@+id/al_remember_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember me"
+                android:layout_centerVertical="true"
+                android:textAppearance="@style/TextAppearance.FontPathNormal"
+                />
+
+        </RelativeLayout>
+
+        <!-- Login button -->
+        <Button
+            android:id="@+id/al_login_button"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.FontPathNormal"
+            android:background="@drawable/selector_button_transparent_white_outline"/>
+    </LinearLayout>
+
+    <Button android:id="@+id/al_register_button"
+        android:background="@drawable/selector_button_pink"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_below="@+id/al_login_layout"
+        android:text="New to collect? Register here"
+        android:textAppearance="@style/TextAppearance.FontPathNormal"
+        android:textColor="#fff"/>
+
+</RelativeLayout>

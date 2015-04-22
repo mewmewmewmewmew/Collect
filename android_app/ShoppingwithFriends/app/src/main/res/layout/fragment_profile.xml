@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="shopping.with.friends.Fragments.MyProfileFragment"
+    android:background="@color/main_blue">
+
+    <RelativeLayout
+        android:id="@+id/fp_profile_header"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp">
+
+        <TextView
+            android:id="@+id/fp_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:textAppearance="@style/TextAppearance.FontAwesome"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="@string/fontawesome_edit_profile"
+            android:clickable="true"/>
+
+        <ImageView
+            android:id="@+id/fp_background_imageView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal|top" />
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/fp_profile_picture"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/blank_profile"
+                app:border_width="2dp"
+                app:border_color="#ffffff"/>
+
+            <TextView
+                android:id="@+id/fp_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textSize="18dp"
+                android:layout_below="@+id/fp_profile_picture"
+                android:textAppearance="@style/TextAppearance.FontPathBold"
+                android:text="Profile Name"/>
+
+            <TextView
+                android:id="@+id/fp_username_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="14dp"
+                android:layout_below="@+id/fp_name_textview"
+                android:textAppearance="@style/TextAppearance.FontPathNormal"
+                android:text="\@username"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fp_button_linear_layout"
+        android:layout_below="@+id/fp_profile_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/profile_followers"
+            android:id="@+id/fp_following_button"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/selector_button_blue"
+            android:textAppearance="@style/TextAppearance.FontPathBold"
+            />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_following"
+            android:id="@+id/fp_followers_button"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/selector_button_blue"
+            android:textAppearance="@style/TextAppearance.FontPathBold"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

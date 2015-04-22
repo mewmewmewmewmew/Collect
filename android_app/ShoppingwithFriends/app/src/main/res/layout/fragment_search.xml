@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_blue"
+    tools:context="shopping.with.friends.Fragments.MyCollections">
+
+
+    <Button
+        android:id="@+id/sf_all_users_button"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_button_pink"
+        android:text="All Users"/>
+
+    <ListView
+        android:id="@+id/sf_search_listview"
+        android:layout_below="@+id/sf_all_users_button"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        </ListView>
+
+</RelativeLayout>

@@ -1,14 +1,26 @@
 /**
- *
  * IMPORTANT DO NOT COMMIT || IMPORTANT DO NOT COMMIT
  *
- * Do not commit this file to git. This file is only here as a example of
- * where to store your secrets i.e. API keys and other sensitive information.
- * To prevent this file from being commited, add this file to your .gitignore
+ * Do not commit this to git - this is only here
+ * as an example
  *
+ * Add this to .gitignore and git rm -rf config/secrets.js
+ *
+ * Store your API keys here
  */
 
-module.exports = {
-	db: process.env.MONGODB || 'mongodb://localhost:27017/mean',
-	port: process.env.port || 9001
+var config = {
+	development: {
+		port: process.env.PORT || 3000,
+		mongoDB: process.env.MONGODB || 'mongodb://localhost:27017/fidy-six'
+	},
+	production: {
+		port: 80,
+		mongoDB: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://localhost/fidy-six'
+	}
+};
+
+exports.config = function() {
+	var node_env = process.env.NODE_ENV || 'development';
+	return config[node_env];
 };
