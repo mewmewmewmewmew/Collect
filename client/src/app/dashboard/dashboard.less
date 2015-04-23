@@ -133,6 +133,7 @@
 	}
 
 	.right-content {
+		background: rgba(237, 237, 237, 1.0);
 		left: 250px;
 		position: absolute;
 		right: 0;
@@ -199,8 +200,12 @@
 	}
 
 	.all-users {
-		  margin-top: -25px;
-  		padding-left: 25px;
+		margin-top: -25px;
+		overflow: auto;
+	}
+	.all-users li {
+		float: left;
+		margin-right: @space-smaller;
 	}
 
 	.template {

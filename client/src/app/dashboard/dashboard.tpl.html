@@ -30,7 +30,8 @@
 				<div class="block-container">
 					<h4 class="block-title pn-h4">All online users</h4>
 					<ul class="all-users">
-						<li ng-repeat="user in vm.data.allUsers">
+						<li ng-repeat="user in vm.data.allUsers"
+							ng-click="vm.addToFollowers(user.name);">
 							<span ng-bind="user.name"></span>
 						</li>
 					</ul>
@@ -40,8 +41,8 @@
 				<div class="block-container">
 					<h4 class="block-title pn-h4">Following</h4>
 					<ul class="all-users">
-						<li ng-repeat="user in vm.data.user.following">
-							<span ng-bind="user.name"></span>
+						<li ng-repeat="user in vm.data.user.following track by $index">
+							<span ng-bind="user"></span>
 						</li>
 					</ul>
 				</div>
@@ -51,7 +52,7 @@
 					<h4 class="block-title pn-h4">Followers</h4>
 					<ul class="all-users">
 						<li ng-repeat="user in vm.data.user.followers">
-							<span ng-bind="user.name"></span>
+							<span ng-bind="user"></span>
 						</li>
 					</ul>
 				</div>
@@ -61,9 +62,9 @@
 					<h4 class="block-title pn-h4">Post Feed</h4>
 					<ul class="ui-list feed-list">
 						<li ng-repeat="post in vm.data.posts">
-							<h5 ng-bind="post.title"></h5>
-							<p ng-bind="post.description"></p>
-							<p ng-bind="post.price"></p>
+							<h5 class="u-float-l" ng-bind="post.title"></h5>
+							<p class="u-float-r" ng-bind="post.price"></p>
+							<p class="u-clearfix" ng-bind="post.description"></p>
 						</li>
 					</ul>
 				</div>

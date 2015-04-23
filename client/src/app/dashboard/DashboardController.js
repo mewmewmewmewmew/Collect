@@ -24,6 +24,11 @@
     		$state.go('login');
     	};
 
+    	vm.addToFollowers = function(name) {
+    		console.log('This is the name', name);
+    		vm.data.user.following.push(name);
+    	};
+
 		vm.data.posts = [{
 			date: new Date().new,
 			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer velit lacus, vehicula id pharetra et, laoreet vel arcu. Curabitur eleifend gravida laoreet.',
