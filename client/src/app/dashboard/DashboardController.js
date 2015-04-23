@@ -1,9 +1,9 @@
 (function() {
     'use strict';
 
-    DashboardController.$inject = ['$http', 'UserService', '$state'];
+    DashboardController.$inject = ['$scope', '$http', 'UserService', '$state'];
 
-    function DashboardController($http, UserService, $state) {
+    function DashboardController($scope, $http, UserService, $state) {
     	var vm = this;
     	vm.data = {};
     	vm.data.user = {};
@@ -19,6 +19,12 @@
     		.then(function(resp) {
     			vm.data.allUsers = resp.data.users;
     		});
+
+    	$scope.$watch(function() {
+    		return vm.data.user;
+    	}, function(newVal, oldVal) {
+    		console.log('The value of user changed', newVal, oldVal);
+    	});
 
     	vm.logout = function() {
     		$state.go('login');
