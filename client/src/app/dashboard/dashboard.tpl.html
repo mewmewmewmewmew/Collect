@@ -1,0 +1,43 @@
+<section id="dashboard">
+	<div class="side-bar">
+		<div class="logo-container">
+			<h3 class="logo pn-h3">Collect</h3>
+		</div>
+		<div class="side-bar-section highlight">
+			<span class="fa fa-home highlight"></span>
+			<h4 class="section pn-h4 highlight">Feed</h4>
+			<span class="fa fa-angle-right highlight"></span>
+		</div>
+		<div class="logout-section" ng-click="vm.logout()">
+			<span class="fa fa-sign-out"></span>
+			<h4 class="logout pn-h4">Logout</h4>
+		</div>
+	</div>
+	<div class="right-content">
+		<div class="nav-bar">
+			<div class="container">
+				<h3 class="header pn-h3">Dashboard</h3>
+				<img class="header-avatar" ng-src="{{user.avatar}}">
+			</div>
+		</div>
+		<div class="container">
+			<div class="block message-of-day">
+				<div class="container">
+					<h4 class="message pn-h4">Hi {{vm.data.user.name}}, welcome to your dashboard!</h4>
+				</div>
+			</div>
+			<div class="block blog-feed">
+				<div class="block-container">
+					<h4 class="block-title pn-h4">Post Feed</h4>
+					<ul class="ui-list feed-list">
+						<li ng-repeat="post in vm.data.posts">
+							<h5 ng-bind="post.title"></h5>
+							<p ng-bind="post.description"></p>
+							<p ng-bind="post.price"></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -5,22 +5,64 @@
  * your attributes uniform across your project
  */
 
-// Font sizes
-@fs-caption: 14.00px;
-@fs-p: 16.00px;
-@fs-h5: 19.44px;
-@fs-h4: 22.13px;
-@fs-h3: 25.19px;
-@fs-h2: 28.68px;
-@fs-h1: 45.16px;
+// Heights
+// --------------------------------------------------
+@medium-size: 40px; // medium sized buttons, inputs, etc.
 
-// Font weights
+// Font Sizes (private)
+// --------------------------------------------------
+@pn-h1-size: 	  42px;
+@pn-h2-size: 	  36px;
+@pn-h3-size: 	  24px;
+@pn-h4-size: 	  20px;
+@pn-h5-size: 	  18px;
+@pn-p-size:  	  16px;
+@pn-caption-size: 14px;
+
+@font-main-h1:		42px;
+@font-main-h2:		36px;
+@font-main-h3:		24px;
+@font-main-h4:		18px;
+@font-main-h5:		16px;
+@font-main-p: 		14px;
+@font-main-caption: 12px;
+
+// Font Sizes (private)
+// --------------------------------------------------
+@line-height-3:		1.7;
+
+// Typography Variables (old)
+// --------------------------------------------------
+
+@lato-h1-size: 		60px;
+@lato-h2-size: 		36px;
+@lato-h3-size: 		24px;
+@lato-h4-size: 		22px;
+@lato-h5-size: 		20px;
+@lato-p-size:  		18px;
+@lato-caption-size: 14px;
+
+@lato-color-light: rgb(153, 153, 153);
+@lato-color-dark: rgb(58, 58, 58);
+
+@h1: 42.635px;
+@h2: 37.897px;
+@h3: 31.984px;
+@h4: 28.430px;
+@h5: 25.994px;
+@h6: 21.328px;
+@p: 18px;
+@caption: 16px;
+
+// Font Weights (public)
+// --------------------------------------------------
 @fw-light:     300;
 @fw-normal:    400;
 @fw-semi-bold: 600;
 @fw-bold:      700;
 
-// Z-index
+// z-index
+// --------------------------------------------------
 @z-index-1:   100;
 @z-index-2:   200;
 @z-index-3:   300;
@@ -32,12 +74,163 @@
 @z-index-9:   900;
 @z-index-10: 1000;
 
-// Spaces
+// Margin and Spacing (old)
+// --------------------------------------------------
+@space-x-small: 5px;
+@space-small: 	15px;
+@space-medium: 	25px;
+@space-large: 	30px;
+@space-x-large: 50px;
+@space-jumbo: 	100px;
+
+// Newest Spaces :D
 @space-smaller: 6.25px;
 @space-small: 12.5px;
 @space-medium: 25px;
 @space-large: 50px;
 @space-larger: 100px;
 
-// Colors
+// Newest Colors :D
+@color-brand-highlight: rgb(88, 156, 237);
+@color-brand-highlight--light: rgb(94, 165, 250);
+
+// @color-brand-main--lightest: rgb(88, 98, 109);
+@color-brand-main--lightest: rgb(154, 166, 180);
+@color-brand-main--light: rgb(67, 77, 92);
+@color-brand-main: rgb(50, 58, 69);
+@color-brand-main--dark: rgb(43, 49, 56);
+
+@color-brand-white--light: rgba(255, 255, 255, 0.7);
 @color-brand-white: rgb(255, 255, 255);
+@color-brand-white--dark: rgba(255, 255, 255, 0.2);
+
+@color-brand-alt: rgb(223, 230, 237);
+@color-brand-alt--dark: rgb(199, 207, 216);
+
+@color-brand-success: rgb(46, 204, 113);
+@color-brand-error: rgb(225, 51, 99);
+
+@color-brand-danger: @color-brand-error;
+@color-brand-danger--light: rgb(240, 56, 107);
+
+@color-brand-overlay--light: rgba(50, 58, 69, 0.4);
+@color-brand-overlay: rgba(50, 58, 69, 0.9);
+
+// for borders
+@color-brand-border--light: rgb(187, 187, 187);
+
+// mostly for fonts
+@color-brand-font-main--dark: rgb(50, 58, 69); // headers
+@color-brand-font-main--medium: rgb(116, 124, 131); // paragraphs
+@color-brand-font-main--light: rgba(0, 0, 0, 0.35); // bolded captions
+
+// Newest Font Sizes :D
+// @fs-subscript: 10.00px; no for now
+@fs-caption: 14.00px;
+@fs-p: 16.00px;
+@fs-h5: 19.44px;
+@fs-h4: 22.13px;
+@fs-h3: 25.19px;
+@fs-h2: 28.68px;
+@fs-h1: 45.16px;
+
+
+// @type-micro
+// @type-smallest
+// @type-smaller
+// @type-small
+// @type-base
+// @type-large
+// @type-larger
+// @type-largest
+// @type-jumbo
+
+// Margin and Spacing
+// --------------------------------------------------
+@space-100:	100px;
+@space-75:	75px;
+@space-50:	50px;
+@space-35:	35px; // config panel
+@space-25: 	25px;
+@space-15:  15px; // config panel (setting only)
+@space-12:	12px;
+@space-6:	6px;
+
+// Colors (old)
+// --------------------------------------------------
+@brand-blue: 	rgb(102, 180, 230);
+
+@dim-white: 	rgba(255, 255, 255, 0.8);
+@white: 		rgb(255, 255, 255);
+
+@grey-on-white-lightest:	rgb(229, 229, 229);
+@grey-on-white-light:  		rgb(210, 210, 210);
+@grey-on-white-medium: 		rgb(103, 103, 103);
+
+@lighter-grey: 	rgb(108, 108, 108);
+@light-grey: 	rgb(68, 68, 68);
+@medium-grey: 	rgb(49, 49, 49);
+@dark-grey: 	rgb(35, 35, 35);
+
+@background-grey-light: #E1E4E7;
+
+@text-grey-lighter: #9EA7AB;
+@text-grey-light: 	rgb(68, 68, 68);
+@text-grey-medium: 	rgb(49, 49, 49);
+@text-grey-dark: 	rgb(35, 35, 35);
+
+// Colors
+// --------------------------------------------------
+@color-brand-twitter: rgb(85, 172, 238);
+@color-brand-facebook: rgb(59, 89, 152);
+@color-brand-linkedin: rgb(9, 118, 180);
+@color-brand-github: rgb(102, 102, 102);
+
+@color-highlight-green: rgb(140, 193, 82);
+@color-highlight-blue: rgb(68, 175, 218);
+@color-highlight-red: rgb(231, 76, 60);
+@color-highlight-purple: rgb(138, 119, 182);
+
+@color-error: rgb(254, 134, 134);
+@color-success: rgb(46, 204, 113);
+@color-warning: rgb(243, 156, 18);
+
+// @color-grey-light: rgb(113, 113, 113);
+// @color-grey-medium: rgb(94, 94, 94);
+@color-grey-lightest: rgb(128, 128, 128);
+@color-grey-light: rgb(103, 103, 103);
+@color-grey-medium: rgb(89, 89, 89);
+// @color-grey-light: rgb(89, 89, 89);
+@color-grey-dark: rgb(63, 63, 63);
+@color-grey-darkest: rgb(35, 35, 35);
+
+// #C1CDD6
+
+@color-greyblue-lightest: 	rgb(233, 239, 244);
+@color-greyblue-light: 		rgb(217, 225, 232);
+@color-greyblue-medium: 	rgb(204, 216, 226);
+
+@color-blue-light: 	rgb(143, 191, 239);
+@color-blue-medium: rgb(88, 156, 237);
+
+@color-white: 		rgb(255, 255, 255);
+@color-white-dim: 	rgba(255, 255, 255, 0.8);
+@color-white-dimmer: rgba(255, 255, 255, 0.5);
+@color-white-dimmest: rgba(255, 255, 255, 0.2);
+
+@color-placeholder-light: rgb(237, 242, 245);
+@color-placeholder-medium: rgb(206, 211, 214);
+
+@color-overlay: rgba(233, 239, 244, 0.5); // Color of overlay modal
+
+// @font-grey-dark: 	rgb(155, 162, 165);
+// @font-grey-darkest: rgb(99, 99, 99);
+@font-grey-dark: rgb(95, 112, 127);
+@font-grey-darkest: rgb(97, 96, 96);
+// @font-grey-dark: rgb(122, 134, 144);
+// @font-grey-darkest: #A2B0BC;
+// Transitions
+// --------------------------------------------------
+
+@swift-in: cubic-bezier(0.7,0,0.3,1);
+@swift-out: cubic-bezier(0.7,0,0.3,1);

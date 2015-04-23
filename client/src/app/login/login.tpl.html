@@ -1,0 +1,34 @@
+<section class="login">
+	<div class="login__nav"
+		ui-sref="root.landing">
+		<i class="fa fa-arrow-left"></i>
+		<span class="login__nav-item">HOME</span>
+	</div>
+	<div class="login__box">
+		<h2 class="login__logo">Collect</h2>
+		<form class="login__form"
+			ng-keypress="vm.keypress()">
+			<input class="login__input ui-input ui-input--medium ui-input--outlined"
+				auto-focus
+				placeholder="email"
+				ng-model="vm.login.email"
+				type="text"
+				required/>
+			<input class="login__input ui-input ui-input--medium ui-input--outlined"
+				placeholder="password"
+				ng-model="vm.login.password"
+				type="password"
+				required/>
+			<button class="ui-btn ui-btn--medium ui-btn--filled"
+				ng-click="vm.submitLogin()">Login</button>
+		</form>
+		<div class="ui-error login__error"
+			ng-show="vm.error">
+			<span ng-bind="vm.errorMessage"></span>
+		</div>
+		<div class="ui-success login__success"
+			ng-show="vm.success">
+			<span ng-bind="vm.successMessage"></span>
+		</div>
+	</div>
+</section>

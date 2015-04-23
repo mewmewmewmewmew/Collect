@@ -13,9 +13,6 @@ var PostController = {};
 
 
 PostController.create = function(req, res) {
-
-    console.log('Im a Barbie girl, in a Barbie world Life in plastic, its fantastic. You can brush my hair, undress me everywhere. Imagination, life is your creation. Come on Barbie, lets go party! Im a Barbie girl, in a Barbie world Life in plastic, its fantastic. You can brush my hair, undress me everywhere. Imagination, life is your creation. Im a blond bimbo girl, in a fantasy world, Dress me up, make it tight, Im your dolly. Youre my doll, rocknroll, feel the glamor in pink, Kiss me here, touch me there, hanky panky. You can touch, you can play, if you say "Im always yours" Im a Barbie girl, in a Barbie world Life in plastic, its fantastic. You can brush my hair, undress me everywhere. Imagination, life is your creation.');
-
     var post = new Post({
         title: req.body.postTitle,
         price: req.body.postPrice,

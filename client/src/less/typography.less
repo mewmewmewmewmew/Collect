@@ -16,6 +16,60 @@
     font-family: 'Quando', serif;
 }
 
+// General Typography Styles
+// --------------------------------------------------
+
+.lato-font {
+    font-family: 'Lato', sans-serif;
+    font-weight: @fw-normal; // default
+}
+
+.helvetica-neue-font {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.proxima-nova-font {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: @fw-normal; // default
+}
+
+.font-proxima-nova-soft {
+    font-family: 'Proxima Nova Soft', sans-serif;
+    font-weight: @fw-normal; // default
+}
+
+.fm-h1 {
+    font-size: @font-main-h1;
+}
+
+.fm-h2 {
+    font-size: @font-main-h2;
+}
+
+.fm-h3 {
+    font-size: @font-main-h3;
+}
+
+.fm-h4 {
+    font-size: @font-main-h4;
+}
+
+.fm-h5 {
+    font-size: @font-main-h5;
+}
+
+.fm-p {
+    font-size: @font-main-p;
+}
+
+.fm-caption {
+    font-size: @font-main-caption;
+}
+
+// New and Modular
+// http://modularscale.com/scale/?px1=18&px2=16&ra1=1.333&ra2=0
+.caption { font-size: @caption; line-height: 1.333; letter-spacing: 0.211px }
+
 h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.158px;
 }
@@ -26,7 +80,10 @@ h1 { font-size: @fs-h1; }
 h2 { font-size: @fs-h2; }
 h3 { font-size: @fs-h3; }
 h4 { font-size: @fs-h4; }
-h5 { font-size: @fs-h5; }
+h5 {
+    font-size: @fs-h5;
+    line-height: 35px;
+}
 p { font-size: @fs-p; }
 .caption { font-size: @fs-caption; }
 
@@ -37,4 +94,147 @@ h1, h2, h3, h4, h5, p, .caption {
 .font-smoothing {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+// h1, h2, h3, h4, h5, h6 { color: @font-grey-darkest; }
+// p, .caption { color: @font-grey-dark; }
+
+// Font weights
+.fw-normal {
+    font-weight: @fw-light;
+}
+.fw-normal {
+    font-weight: @fw-normal;
+}
+
+.fw-semi-bold {
+    font-weight: @fw-semi-bold;
+}
+
+.s-lh-3 {
+    line-height: @line-height-3;
+}
+
+// Proxima Nova
+// --------------------------------------------------
+.pn-h1,
+.pn-h2,
+.pn-h3,
+.pn-h4,
+.pn-h5,
+.pn-p,
+.pn-caption {
+    .proxima-nova-font;
+}
+
+.pn-h1 {
+    font-size: @pn-h1-size;
+}
+
+.pn-h2 {
+    font-size: @pn-h2-size;
+}
+
+.pn-h3 {
+    font-size: @pn-h3-size;
+}
+
+.pn-h4 {
+    font-size: @pn-h4-size;
+}
+
+.pn-h5 {
+    font-size: @pn-h5-size;
+}
+
+.pn-p {
+    font-size: @pn-p-size;
+}
+
+.pn-caption {
+    font-size: @pn-caption-size;
+}
+
+// Proxima Nova
+// --------------------------------------------------
+.lato-h1,
+.lato-h2,
+.lato-h3,
+.lato-h4,
+.lato-h5,
+.lato-p,
+.lato-caption {
+    .lato-font;
+}
+
+.lato-h1 {
+    font-size: @lato-h1-size;
+    text-transform: uppercase;
+}
+
+.headline {
+    font-size: @lato-h2-size;
+}
+
+.lato-h3 {
+    font-size: @lato-h3-size;
+}
+
+.lato-h5 {
+    font-size:@lato-h5-size;
+}
+
+.lato-p {
+    font-size: @lato-p-size;
+}
+
+.lato-caption {
+    font-size: @lato-caption-size;
+}
+
+// Font Definitions
+// --------------------------------------------------
+
+// Proxima Nova
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('assets/fonts/ProximaNova/ProximaNova-Light.otf.otf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('assets/fonts/ProximaNova/ProximaNova-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('assets/fonts/ProximaNova/ProximaNova-Semibold.otf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('assets/fonts/ProximaNova/ProximaNova-Bold.otf');
+    font-weight: 700;
+}
+
+// Proxima Nova Soft
+@font-face {
+    font-family: 'Proxima Nova Soft';
+    src: url('assets/fonts/ProximaNovaSoft/ProximaNovaSoft-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Soft';
+    src: url('assets/fonts/ProximaNovaSoft/ProximaNovaSoft-Semibold.otf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Soft';
+    src: url('assets/fonts/ProximaNovaSoft/proxima-nova-soft-bold.otf');
+    font-weight: 700;
 }

@@ -175,6 +175,11 @@ UserController.getFollowing = function(req, res) {
 };
 
 UserController.get = function(req, res) {
+    console.log('Yo', req.cookies);
+    if (!req.query.id) {
+        req.query.id = req.cookies.LOGIN_INFO.userId;
+    }
+
     User.findById(req.query.id)
         .exec(function(err, user) {
             if (err) {
@@ -402,7 +407,7 @@ UserController.login = function(req, res) {
                 email: user.email
             };
 
-            res.cookie('LOGIN_INFO', cookie, { domain: config.domain });
+            res.cookie('LOGIN_INFO', cookie);
 
             console.log('You are logged in', user);
 

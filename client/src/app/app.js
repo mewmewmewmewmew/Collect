@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     function config($locationProvider, $stateProvider, $urlRouterProvider) {
@@ -8,18 +8,44 @@
 
         // States
         $stateProvider
-            // Home
-            .state('home', {
-                url: '/',
+        // Home
+        .state('home', {
+            url: '/',
+            views: {
+                'content@': {
+                    controller: 'HomeController',
+                    controllerAs: 'vm',
+                    template: 'Hello world'
+                }
+            },
+            data: {
+                pageTitle: 'Home'
+            }
+        })
+            .state('login', {
+                url: '/login',
                 views: {
                     'content@': {
-                        controller: 'HomeController',
+                        controller: 'LoginController',
                         controllerAs: 'vm',
-                        template: 'Hello world'
+                        templateUrl: 'login/login.tpl.html'
                     }
                 },
                 data: {
-                    pageTitle: 'Home'
+                    pageTitle: 'Login'
+                }
+            })
+            .state('dashboard', {
+                url: '/dashboard',
+                views: {
+                    'content@': {
+                        controller: 'DashboardController',
+                        controllerAs: 'vm',
+                        templateUrl: 'dashboard/dashboard.tpl.html'
+                    }
+                },
+                data: {
+                    pageTitle: 'Dashboard'
                 }
             });
     }
@@ -31,10 +57,15 @@
     angular
         .module('app', [
             'app.home',
+            'app.login',
+            'app.dashboard',
+            'AuthService',
+            'UserService',
+            'templates-app',
             'ui.router'
         ])
         .config(config) // 1st
-        .run(run) // 2nd
-        .controller('AppController', AppController); // 3rd
+    .run(run) // 2nd
+    .controller('AppController', AppController); // 3rd
 
 }());
