@@ -483,6 +483,7 @@ passport.use('signup', new LocalStrategy({
             newUser.username = req.body.username;
             newUser.password = userUtils.createHash(password);
             newUser.email = email;
+            newUser.threshold = 0;
 
             newUser.save(function(err) {
                 if (err) {

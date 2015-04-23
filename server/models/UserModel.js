@@ -10,6 +10,7 @@ var UserSchema = new Schema({
 	username: String,
 	password: String,
 	email: String,
+	threshold: Number,
 	followers: [],
 	following: [],
 	posts: [],
