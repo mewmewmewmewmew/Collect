@@ -7,10 +7,17 @@
     	var vm = this;
     	vm.data = {};
     	vm.data.user = {};
+    	vm.data.allUsers = {};
 
     	UserService.get()
     		.then(function(resp) {
     			vm.data.user = resp.data.user;
+    			console.log(vm.data.user);
+    		});
+
+    	UserService.getAllUsers()
+    		.then(function(resp) {
+    			vm.data.allUsers = resp.data.users;
     		});
 
     	vm.logout = function() {

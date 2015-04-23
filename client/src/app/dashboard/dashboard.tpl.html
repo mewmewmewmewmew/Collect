@@ -28,6 +28,36 @@
 			</div>
 			<div class="block blog-feed">
 				<div class="block-container">
+					<h4 class="block-title pn-h4">All online users</h4>
+					<ul class="all-users">
+						<li ng-repeat="user in vm.data.allUsers">
+							<span ng-bind="user.name"></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="block blog-feed block--half">
+				<div class="block-container">
+					<h4 class="block-title pn-h4">Following</h4>
+					<ul class="all-users">
+						<li ng-repeat="user in vm.data.user.following">
+							<span ng-bind="user.name"></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="block blog-feed block--half block--half-last">
+				<div class="block-container">
+					<h4 class="block-title pn-h4">Followers</h4>
+					<ul class="all-users">
+						<li ng-repeat="user in vm.data.user.followers">
+							<span ng-bind="user.name"></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="block blog-feed">
+				<div class="block-container">
 					<h4 class="block-title pn-h4">Post Feed</h4>
 					<ul class="ui-list feed-list">
 						<li ng-repeat="post in vm.data.posts">

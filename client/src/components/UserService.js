@@ -6,7 +6,8 @@
 	function UserService($http) {
 		var User = {
 			get: get,
-			getPosts: getPosts
+			getPosts: getPosts,
+			getAllUsers: getAllUsers
 		};
 
 		function get() {
@@ -25,6 +26,13 @@
 
 		function getPosts() {
 			console.log('Yo');
+		}
+
+		function getAllUsers() {
+			return $http({
+				url: '/api/user/get-all-users',
+				method: 'GET'
+			});
 		}
 
 		return User;
